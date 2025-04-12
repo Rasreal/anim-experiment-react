@@ -31,6 +31,7 @@ const FallingText = ({
         textRef.current.innerHTML = newHTML;
     }, [text, highlightWords, highlightClass]);
 
+    //side effect qosyldy
     useEffect(() => {
         if (trigger === "auto") {
             setEffectStarted(true);
@@ -113,9 +114,17 @@ const FallingText = ({
                 x: (Math.random() - 0.5) * 5,
                 y: 0
             });
-            Matter.Body.setAngularVelocity(body, (Math.random() - 0.5) * 0.05);
+
+            // 0.1 - slow
+            // 0.9 - fast
+
+
+            Matter.Body.setAngularVelocity(body, (Math.random() - 0.1) * 0.02);
             return { elem, body };
         });
+
+
+
 
         wordBodies.forEach(({ elem, body }) => {
             elem.style.position = "absolute";
