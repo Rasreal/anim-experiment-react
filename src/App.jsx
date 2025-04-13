@@ -26,18 +26,37 @@ function App() {
     const handleAddWord = () => {
         if(newHighlightedWord.trim() && !highlightedWords.includes(newHighlightedWord.trim())) {
             setHighlightedWords([...highlightedWords, newHighlightedWord.trim()]);
+
             setNewHighlightedWord(""); // Clear the input field after adding
+
         }
     };
+
+
 
     const handleRemoveWord = (wordToRemove) => {
         setHighlightedWords(highlightedWords.filter(word => word !== wordToRemove));
     };
 
+
     useEffect(() => {
-        const savedValue = localStorage.getItem('inputValue');
-        if(savedValue) {
-            setInputValue(savedValue);
+        if (highlightedWords.length > 0) {
+            localStorage.setItem('highlightWordsValue', JSON.stringify(highlightedWords));
+        }
+    }, [highlightedWords]);
+
+    useEffect(() => {
+        const savedInputValue = localStorage.getItem('inputValue');
+        const savedHighlightValueString = localStorage.getItem('highlightWordsValue');
+
+        if(savedInputValue) {
+            setInputValue(savedInputValue);
+        }
+        if(savedHighlightValueString){
+            const savedHighlightValue = JSON.parse(savedHighlightValueString) || [];
+
+            console.log(savedHighlightValue)
+            setHighlightedWords(savedHighlightValue);
         }
     }, []);
 
