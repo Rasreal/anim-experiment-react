@@ -46,167 +46,22 @@
 .page {
     display: flex;
     flex-direction: column;
-    justify-content: start;
 }
 
-.container {
-    display: flex;
-    width: 1000px;
-    height: auto;
-    text-align: left;
-    align-items: start;
-    column-gap: 40px;
-    padding: 50px;
-    margin-top: 20px;
-    border-radius: 16px;
-    border: 1px #1a1a1a solid;
 
-    h2 {
-        font-weight: 500 !important;
+@media (max-width: 1200px) {
+    h2{
+        font-size: 1.2em;
     }
 
+    .reminder-text{
+        span{
+            width: 30px;
+            height: 30px;
+        }
 
-}
-
-.reminder-text{
-    display: flex;
-    align-items: center;
-
-    span {
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        background-color: #de2363;
-        color: white;
-        font-size: 1.5rem;
-        margin-right: 10px;
+        p{
+            font-size: 0.9em;
+        }
     }
 }
-
-.input-container {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    font-size: 16px;
-    width: auto;
-}
-.input-container textarea {
-    width: 300px;
-    border-radius: 16px;
-    padding: 10px;
-    max-width: 300px;
-
-   :focus {
-        border: 1px solid #af0b0b;
-        transition: border 0.3s ease-in-out;
-    }
-}
-
-.add-word-button {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    background-color: #1185ff;
-    color: white;
-    padding: 5px 15px;
-    border: none;
-    border-radius: 12px;
-    cursor: pointer;
-    font-size: 14px;
-    margin-bottom: 15px;
-}
-
-.add-word-button:hover {
-    background-color: #0a6ebc;
-}
-
-.highlight-input-row {
-    display:flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: flex-start;
-    margin-top: 20px;
-    max-width: 200px;
-}
-
-.highlighted-words-container {
-    margin-top: 15px;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 10px;
-}
-
-.highlighted-word-item {
-    display: flex;
-    border: 1px solid rgba(78, 129, 231, 0.6);
-    border-radius: 12px;
-    padding: 10px;
-    align-items: center;
-    margin: 5px 0;
-}
-
-.highlighted-word {
-    margin-right: 5px;
-    font-weight: bold;
-}
-
-.remove-word-button {
-    padding: 0;
-    background: none;
-    border: none;
-    color: #f44336;
-    cursor: pointer;
-
-    :focus{
-        color: #e8e8e8;
-    }
-}
-
-
-
-
-
-/*Falling Text css*/
-
-.falling-text-container {
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    height: 300px !important;
-    cursor: pointer;
-    text-align: center;
-    padding-top: 2em;
-    padding-horizontal: 1em;
-
-    border-radius: 16px;
-    border: 1px #1a1a1a solid;
-}
-
-.falling-text-target {
-    display: inline-block;
-}
-
-.word {
-    display: inline-block;
-    margin: 0 2px;
-    user-select: none;
-}
-
-.highlighted {
-    color: cyan;
-    font-weight: bold;
-}
-
-.falling-text-canvas {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0;
-}
-
-
-

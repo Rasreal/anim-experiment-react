@@ -1,0 +1,49 @@
+/* ScrollingTextEditor.css */
+.scrolling-text-container {
+    padding-left: 0.5rem; /* px-2 */
+    padding-right: 0.5rem; /* px-2 */
+    background-color: #00bcd4; /* bg-cyan-300 */
+    color: black; /* text-black */
+    overflow: hidden; /* overflow-hidden */
+    padding-top: 0.125rem; /* py-0.5 */
+    padding-bottom: 0.125rem; /* py-0.5 */
+    display: flex;
+    justify-content: center; /* justify-center */
+    border-radius: 0.5rem; /* rounded-lg */
+}
+
+/* Media Queries */
+@media (min-width: 640px) {
+    .scrolling-text-container {
+        padding-left: 0.5rem; /* sm:px-2 */
+        padding-right: 0.5rem; /* sm:px-2 */
+        padding-top: 0.25rem; /* sm:py-1 */
+        padding-bottom: 0.25rem; /* sm:py-1 */
+    }
+}
+
+@media (min-width: 768px) {
+    .scrolling-text-container {
+        padding-left: 0.75rem; /* md:px-3 */
+        padding-right: 0.75rem; /* md:px-3 */
+        padding-top: 0.5rem; /* md:py-2 */
+        padding-bottom: 0.5rem; /* md:py-2 */
+    }
+}
+
+.split-text-container {
+    overflow: hidden; /* overflow-hidden */
+    padding-bottom: 0.125rem; /* pb-0.5 */
+}
+
+@media (min-width: 640px) {
+    .split-text-container {
+        padding-bottom: 0.25rem; /* sm:pb-1 */
+    }
+}
+
+@media (min-width: 768px) {
+    .split-text-container {
+        padding-bottom: 0.25rem; /* md:pb-1 */
+    }
+}
